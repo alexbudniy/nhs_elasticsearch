@@ -1,0 +1,29 @@
+{
+  "template": "conditions",
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "nhs_page": {
+      "_all": {
+        "enabled": false
+      },
+      "properties": {
+        "title": {
+          "type": "string",
+          "index":  "not_analyzed"
+        },
+        "url": {
+          "type": "string",
+          "index":  "not_analyzed"
+        },
+        "content": {
+          "type": "string",
+          "index": "analyzed",
+          "analyzer": "english"
+        }
+      }
+    }
+  }
+}
