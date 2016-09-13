@@ -1,7 +1,9 @@
+#NHS Crawler
+
 Crawls NHS syndication website, loading conditions into embedded Elasticsearch. Provides a REST service to
 query data and get URLs to relevant NHS pages
 
-Instructions to run:
+##Instructions to run:
 1. mvn clean package
 2. java -jar target/nhs-conditions-service-1.0.0.jar
 
@@ -10,6 +12,8 @@ http://localhost:8080/nhs/conditions/search?q=What about headache?
 
 Crawler will start up automatically. Currently crawler log is in DEBUG mode to show visited/saved pages.
 Debug log can be suppressed in main/resources/logback.xml file.
+
+##Configuration
 
 Application properties can be found in the file application.yml:
 
